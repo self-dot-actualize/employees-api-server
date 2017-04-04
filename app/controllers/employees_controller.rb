@@ -13,7 +13,7 @@ class EmployeesController < ApplicationController
       ssn: params[:ssn]
     )
     @employee.save
-    redirect_to "/employees/#{@employee.id}"
+    render "show.json.jbuilder"
   end
 
   def show
